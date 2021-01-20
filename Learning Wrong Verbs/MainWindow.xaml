@@ -1,0 +1,33 @@
+﻿<Window x:Name="mainWindow" x:Class="Learning_Wrong_Verbs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Learning_Wrong_Verbs"
+        mc:Ignorable="d"
+        Title="Learning Verbs" Height="450" Width="561.028" Icon="ico.png" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" ResizeMode="NoResize" MinHeight="798" MinWidth="1000" HorizontalAlignment="Center" HorizontalContentAlignment="Center">
+    <Grid x:Name="grid" Opacity="0.3">
+        <Grid.Background>
+            <ImageBrush ImageSource="bg.jpg"/>
+        </Grid.Background>
+        <DataGrid x:Name="dataGrid" HeadersVisibility="None" AutoGenerateColumns="True" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="True" CanUserResizeRows="False" CanUserSortColumns="False" CanUserResizeColumns="False" CanUserReorderColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Opacity="0.6" FontSize="32" FontFamily="Arial Black" RowEditEnding="dataGrid_RowEditEnding" Height="678" Margin="0,0,-0.4,0" Width="994" Visibility="Hidden" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+            <!--<DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="False" Header="Переклад" Binding="{Binding Path=Translation, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Перша форма" Binding="{Binding Path=FForm, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Друга форма" Binding="{Binding Path=SForm, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Третя форма" Binding="{Binding Path=TForm, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"></DataGridTextColumn>
+                <DataGridCheckBoxColumn Header="Результат" Binding="{Binding Path=Right, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"></DataGridCheckBoxColumn>
+            </DataGrid.Columns>-->
+            <DataGrid.ItemBindingGroup>
+                <BindingGroup/>
+            </DataGrid.ItemBindingGroup>
+        </DataGrid>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="184" Margin="393,155,0,0" DropDownClosed="comboBox_DropDownClosed" IsEditable="True" FontWeight="Bold" Height="84" FontFamily="Arial Black" FontSize="48"/>
+        <Label x:Name="lettersL" Content="Choose letters" HorizontalAlignment="Left" Height="118" Margin="195,32,0,0" VerticalAlignment="Top" Width="588" FontFamily="Arial Black" FontSize="72" FontWeight="Black"/>
+        <Button x:Name="startBtn" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Width="184" Margin="393,446,0,0" Height="100" FontWeight="ExtraBlack" Click="startBtn_Click" FontFamily="Arial Black" FontSize="64" BorderThickness="3"/>
+        <Button x:Name="nextBtn" Content="Next" Height="40" Margin="774,701,99.6,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="24" Click="nextBtn_Click" Visibility="Hidden"/>
+        <Button x:Name="quitBtn" Content="Quit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="184" Margin="393,578,0,0" Height="100" FontWeight="ExtraBlack" FontFamily="Arial Black" FontSize="64" Click="quitBtn_Click" BorderThickness="3"/>
+        <Button x:Name="quitBtn_Copy" Content="Quit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="100,701,0,0" Height="40" FontWeight="ExtraBlack" FontFamily="Arial Black" FontSize="24" Click="quitBtn_Click" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
